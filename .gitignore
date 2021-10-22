@@ -1,0 +1,12 @@
+
+# temporary files
+*.pid
+
+# passwords
+secrets.cfg
+
+# databases
+*.db
+
+#logs
+logs/

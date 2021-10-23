@@ -2,13 +2,15 @@
 
 if ! grep -qv '^#' secrets.cfg; then
   echo "Need to populate secrets.cfg!"
-  exit 1
+else
+  set -o allexport
+  source secrets.cfg
+  set +o allexport
 fi
-
-set -o allexport
-source secrets.cfg
-set +o allexport
 
 export SOPEL_CONFIG=$PWD/EV0003.cfg
 
-sopel "$@"
+# run sopel command (with suffix through symlink)
+me=`basename "$0"`
+sopel="sopel${me#EV0003}"
+exec $sopel "$@"

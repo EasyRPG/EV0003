@@ -8,5 +8,9 @@ secrets.cfg
 # databases
 *.db
 
-#logs
+# logs
 logs/
+
+# cache
+__pycache__/
+unsafedomains.txt

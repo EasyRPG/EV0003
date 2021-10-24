@@ -16,7 +16,7 @@ from sopel import tools
 from sopel.module import OP, NOLIMIT, commands, example, require_chanmsg, rule, url
 from sopel.formatting import bold, color, monospace
 from sopel.tools.time import get_timezone, format_time
-from sopel.config.types import StaticSection, ValidatedAttribute
+from sopel.config.types import StaticSection, BooleanAttribute, ValidatedAttribute
 
 from . import formatting
 from .formatting import shorten_url, emojize
@@ -68,7 +68,7 @@ class GitHubSection(StaticSection):
     client_id = ValidatedAttribute('client_id', default=None)
     client_secret = ValidatedAttribute('client_secret', default=None)
     secret = ValidatedAttribute('secret', default=None)  # TODO remove in 0.3.0 or thereabouts
-    webhook = ValidatedAttribute('webhook', bool, default=False)
+    webhook = BooleanAttribute('webhook', default=False)
     webhook_host = ValidatedAttribute('webhook_host', default='0.0.0.0')
     webhook_port = ValidatedAttribute('webhook_port', default='3333')
     external_url = ValidatedAttribute('external_url', default='http://your_ip_or_domain_here:3333')

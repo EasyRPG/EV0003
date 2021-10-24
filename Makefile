@@ -6,6 +6,7 @@ check:
 	git --version
 	jq --version
 	sopel --version
+	python -c "import dateparser"
 	@echo All ok?!
 
 define get_release

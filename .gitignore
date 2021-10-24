@@ -10,6 +10,7 @@ secrets.cfg
 
 # logs
 logs/
+chanlogs/
 
 # cache
 __pycache__/

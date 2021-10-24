@@ -1,4 +1,3 @@
-# -*- coding: utf8 -*-
 """
 asciifood.py - Just delicious
 
@@ -10,6 +9,7 @@ Licensed under the Eiffel Forum License 2.
 
 https://github.com/EasyRPG/EV0003
 """
+from __future__ import generator_stop
 
 from sopel import plugin
 

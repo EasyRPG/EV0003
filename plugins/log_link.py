@@ -1,4 +1,3 @@
-# -*- coding: utf8 -*-
 """
 log-link.py - Give the correct log file link by date
 
@@ -10,6 +9,7 @@ Licensed under the Eiffel Forum License 2.
 
 https://github.com/EasyRPG/EV0003
 """
+from __future__ import generator_stop
 
 from sopel import plugin
 from sopel.config import types
